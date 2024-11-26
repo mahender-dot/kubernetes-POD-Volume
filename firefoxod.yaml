@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fire-pod
+  namespace: default
+  labels:
+    app: fire
+    
+spec:
+  # volumes:
+  # - name: ms-volume
+  #   emptyDir:
+  #     sizeLimit: 200Mi
+  containers:
+  - image: linuxserver/firefox
+    name: firefox-ct1
+    ports:
+    - containerPort: 3000
+    # volumeMounts:
+    # - mountPath: /usr/share/nginx/html
+    #   name: ms-volume
